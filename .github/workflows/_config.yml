@@ -1,3 +1,8 @@
+title: VERSATALES Hub's Homepage
+description: Bookmark this page to stay updated on my project's progress and updates!
 theme: jekyll-theme-minimal
-title: versataleshub's homepage
-description: Bookmark this to keep an eye on my project updates!
+url: "https://sai-klu123.github.io/index.html"
+markdown: kramdown
+kramdown:
+  input: GFM
+permalink: pretty
