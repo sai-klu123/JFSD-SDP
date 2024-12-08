@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VERSATALES Hub</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom right, #4f46e5, #9333ea);
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background: transparent;
+      z-index: 10;
+    }
+    header h1 {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    header button {
+      background-color: #ffffff;
+      color: #4f46e5;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    header button:hover {
+      background-color: #e0e7ff;
+    }
+    main {
+      padding-top: 100px;
+    }
+    section {
+      padding: 20px;
+      margin: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    h2 {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      margin: 10px 0;
+      padding-left: 20px;
+      position: relative;
+    }
+    ul li:before {
+      content: "✔";
+      color: #facc15;
+      position: absolute;
+      left: 0;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background: #4f46e5;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+    .scroll-to-top {
+      position: fixed;
+      bottom: 100px;
+      right: 30px;
+      background: #4f46e5;
+      color: #ffffff;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      cursor: pointer;
+      display: none;
+    }
+    .scroll-to-top:hover {
+      background: #3b82f6;
+    }
+    .bg-image {
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>VERSATALES Hub</h1>
+    <div>
+      <button onclick="navigateTo('login')">Login</button>
+      <button onclick="navigateTo('signup')">Signup</button>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>Welcome to Your VERSATALES Hub!</h2>
+      <p>Organize, track, and excel in all your extracurricular activities.</p>
+      <button onclick="navigateTo('signup')">Get Started</button>
+    </section>
+
+    <section>
+      <h2>Why Use VERSATALES Hub</h2>
+      <ul>
+        <li>Centralized Platform for all activities.</li>
+        <li>Earn Credit Points for achievements.</li>
+        <li>Authenticity through verification.</li>
+        <li>Boost Your Profile.</li>
+        <li>Discover Opportunities.</li>
+        <li>Collaboration Made Easy.</li>
+        <li>Recognition and Rewards.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>What Students Feel</h2>
+      <p>"This platform helps me stay organized and manage all my activities in one place."</p>
+      <p>"It's so easy to connect with clubs and events that match my interests."</p>
+      <p>"I love how I can showcase my achievements effortlessly."</p>
+    </section>
+
+    <section class="bg-image" style="background-image: url('/images/grp.jpg');"></section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 VERSATALES Hub. All rights reserved.</p>
+  </footer>
+
+  <button class="scroll-to-top" id="scrollToTopButton" onclick="scrollToTop()">↑</button>
+
+  <script>
+    const scrollToTopButton = document.getElementById("scrollToTopButton");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        scrollToTopButton.style.display = "flex";
+      } else {
+        scrollToTopButton.style.display = "none";
+      }
+    });
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    function navigateTo(page) {
+      alert(`Navigate to ${page} page.`);
+      // Replace with navigation logic for your app
+    }
+  </script>
+</body>
+</html>
